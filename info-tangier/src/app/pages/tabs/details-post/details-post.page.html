@@ -2,31 +2,29 @@
 
 
 <ion-content [fullscreen]="true" color="light">
-  <img class="card-img-top img-fluid img-post"    src="{{postData?.postImgPath }}" alt="">
+
   <ion-header   
-    class="ion-no-border"   >
-    <ion-toolbar>
+ >
+ <img     src="{{postData.postImgPath }}" alt="" class="img-details"  > 
+    <!-- <ion-toolbar>
      
       <ion-buttons slot="start">
        
-        <ion-fab-button size="small" color="white" routerLink="/">
+        <ion-fab-button size="small" color="primary" routerLink="/#">
           <ion-icon name="chevron-back-outline" color="light"></ion-icon>
         </ion-fab-button>
       </ion-buttons>
-      <!-- <ion-buttons slot="end">
+      <ion-buttons slot="end">
         <ion-fab-button size="small" color="white">
           <ion-icon name="heart-outline" color="dark"></ion-icon>
         </ion-fab-button>
-      </ion-buttons> -->
-    </ion-toolbar>
-    <ion-label color="primary">
+      </ion-buttons>
+    </ion-toolbar> -->
+    <ion-label color="light" class="title-details">
       {{postData?.title}}
-      <p class="ion-margin-top">
-        <!-- <ion-text>₹  {{item?.price}}</ion-text> -->
-        <span></span>
-      </p>
+     
     </ion-label>
- 
+   
   </ion-header>
 
   <ion-segment
@@ -44,13 +42,13 @@
 
   <ion-grid *ngIf="segmentValue == '1'">
     <ion-row>
-      <ion-col size="6">
+      <ion-col size="6"  *ngIf="postData.isFeatured">
         <ion-item lines="none">
           <ion-icon name="time" slot="start" color="primary"></ion-icon>
           <ion-label>
-            <ion-text color="medium">DURATION</ion-text>
+            <ion-text color="medium"> Featured</ion-text>
             <p>
-              <!-- <ion-text color="dark">{{item?.duration}} hours</ion-text> -->
+              <ion-text color="dark"> by users</ion-text>
             </p>
           </ion-label>
         </ion-item>
@@ -59,13 +57,37 @@
         <ion-item lines="none">
           <ion-icon name="star" slot="start" color="primary"></ion-icon>
           <ion-label>
-            <ion-text color="medium">RATING</ion-text>
+            <ion-text color="medium">Views</ion-text>
             <p>
-              <!-- <ion-text color="dark">{{item?.rating}} out of 5</ion-text> -->
+              <ion-text color="dark">{{postData.views}} Time</ion-text>
             </p>
           </ion-label>
         </ion-item>
       </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-text color="medium" class="ion-text-justify ion-padding-horizontal description">
+        <p [innerHtml]="postData.content"></p>
+      </ion-text>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid *ngIf="segmentValue == '2'">
+    <ion-row>
+      <ion-col >
+        <ion-item lines="none">
+          <ion-icon name="time" slot="start" color="primary"></ion-icon>
+          <ion-label>
+            <ion-text color="medium">Comment</ion-text>
+            <p>
+              <!-- <ion-text color="dark">{{item?.duration}} hours</ion-text> -->
+            </p>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+ 
     </ion-row>
 
     <ion-row>
