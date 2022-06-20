@@ -20,10 +20,9 @@ export class CategoryPagePage implements OnInit {
       this.categoryObj = val
 
       this.postService.loadCategoryPost(val['id']).subscribe(post =>{
+        console.log(post);
         this.postArray = post
         console.log(this.postArray);
-      
-
       })
     })
   }

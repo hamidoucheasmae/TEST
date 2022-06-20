@@ -3,17 +3,32 @@
   <ion-header class="container text-white">
   
      {{ categoryObj?.category }}
-      
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-  </ion-header>
-</ion-col>
+    </ion-header>
+  </ion-col>
 
 
-<div class="row">
-  <div *ngFor="let post of postArray">
-      <app-post-card [postData]="post"></app-post-card>
+
+
+<ion-card  *ngFor="let post of postArray" class="location-card">
+  
+  <div >
+    <img src="{{ post.data.postImgPath }}" />
   </div>
-</div>
+  <ion-item lines="none">            
+    <ion-label class="ion-text-wrap">
+      <ion-text class="title">{{ post.data.title }}</ion-text>
+      <p>
+        <ion-text color="medium">
+          {{ categoryObj?.category }}
+        </ion-text>
+      </p>
+    </ion-label>
+    <!-- <ion-fab-button size="small" slot="end" color="white">
+      <ion-icon name="heart-outline" color="medium"></ion-icon>
+    </ion-fab-button> -->
+  </ion-item>
+</ion-card>
 
 
 </ion-content>

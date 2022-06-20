@@ -11,9 +11,8 @@ import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment';
-import { PostCardComponent } from './post-card/post-card.component';
-import { CategoryPagePage } from './pages/tabs/category-page/category-page.page';
-import { CategoryComponent } from './category/category.component';
+import { CommonModule } from '@angular/common';
+import { CategoryPagePageModule } from './pages/tabs/category-page/category-page.module';
 
 // import { Camera } from '@ionic-native/camera/ngx';
 // import { File } from '@ionic-native/file/ngx';
@@ -21,7 +20,7 @@ import { CategoryComponent } from './category/category.component';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule, CategoryPagePageModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'TangerInfo'), AngularFirestoreModule,AngularFireAuthModule],
   providers: [
     

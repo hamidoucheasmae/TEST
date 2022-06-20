@@ -16,6 +16,6 @@ import { PostCardComponent } from 'src/app/post-card/post-card.component';
     IonicModule,
     // CategoryPagePageRoutingModule
   ],
-  declarations: [CategoryPagePage,PostCardComponent]
+  declarations: [CategoryPagePage]
 })
 export class CategoryPagePageModule {}
