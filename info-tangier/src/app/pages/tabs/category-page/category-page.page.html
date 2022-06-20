@@ -1,15 +1,23 @@
-<ion-content>
-<ion-col class="bg-theme p-5" >
+
+<!-- <ion-col class="bg-theme p-5" >
   <ion-header class="container text-white">
   
      {{ categoryObj?.category }}
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
     </ion-header>
-  </ion-col>
+  </ion-col> -->
 
+ 
+  <ion-header class="ion-no-border ">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button mode="md" defaultHref="/tabs/home" color="primary"> </ion-back-button>
+      </ion-buttons>
+      <ion-title> {{ categoryObj?.category }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-
-
+  <ion-content>
 <ion-card  *ngFor="let post of postArray" class="location-card">
   
   <div >
