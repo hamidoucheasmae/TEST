@@ -14,14 +14,14 @@ const routes: Routes = [
       //   path: 'details/:id',
       //   loadChildren: () => import('./details-post/details-post.module').then( m => m.DetailsPostPageModule)
       // },
-      {
-        path: 'details/:id',
-        component: DetailsPostPage,
-      },
-      {
-        path: 'category/:id',
-        component: CategoryPagePage,
-      },
+      // {
+      //   path: 'details/:id',
+      //   component: DetailsPostPage,
+      // },
+      // {
+      //   path: 'category/:id',
+      //   component: CategoryPagePage,
+      // },
       
       {
         path: 'home',

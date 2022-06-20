@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { CategoryPagePage } from './pages/tabs/category-page/category-page.page';
 import { DetailsPostPage } from './pages/tabs/details-post/details-post.page';
 
 const routes: Routes = [
@@ -7,7 +8,10 @@ const routes: Routes = [
     path: 'details/:id',
     component: DetailsPostPage,
   },
-  
+  {
+    path: 'category/:category/:id',
+    component: CategoryPagePage,
+  },
   {
     path: '',
     redirectTo: 'welcome',

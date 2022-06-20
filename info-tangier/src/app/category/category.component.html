@@ -3,7 +3,7 @@
     <ion-card>
       <ion-item lines="none">
      
-        <ion-label class="ion-text-wrap"  href=""  [routerLink]="['/category', category?.id]">{{category?.data?.category}}</ion-label>
+        <ion-label class="ion-text-wrap" [routerLink]="['/category',category.data.category, category.id]">{{category?.data?.category}}</ion-label>
       </ion-item>
     </ion-card>
   </ng-template>
