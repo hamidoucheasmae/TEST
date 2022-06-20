@@ -2,24 +2,11 @@
 
 
 <ion-content [fullscreen]="true" color="light">
+ 
+  <ion-header>
 
-  <ion-header   
- >
- <img     src="{{postData.postImgPath }}" alt="" class="img-details"  > 
-    <!-- <ion-toolbar>
-     
-      <ion-buttons slot="start">
-       
-        <ion-fab-button size="small" color="primary" routerLink="/#">
-          <ion-icon name="chevron-back-outline" color="light"></ion-icon>
-        </ion-fab-button>
-      </ion-buttons>
-      <ion-buttons slot="end">
-        <ion-fab-button size="small" color="white">
-          <ion-icon name="heart-outline" color="dark"></ion-icon>
-        </ion-fab-button>
-      </ion-buttons>
-    </ion-toolbar> -->
+ <img  src="{{postData.postImgPath }}" alt="" class="img-details"  > 
+
     <ion-label color="light" class="title-details">
       {{postData?.title}}
      
@@ -44,7 +31,7 @@
     <ion-row>
       <ion-col size="6"  *ngIf="postData.isFeatured">
         <ion-item lines="none">
-          <ion-icon name="time" slot="start" color="primary"></ion-icon>
+          <ion-icon name="star" slot="start" color="primary"></ion-icon>
           <ion-label>
             <ion-text color="medium"> Featured</ion-text>
             <p>
@@ -55,7 +42,7 @@
       </ion-col>
       <ion-col size="6">
         <ion-item lines="none">
-          <ion-icon name="star" slot="start" color="primary"></ion-icon>
+          <ion-icon name="eye" slot="start" color="primary"></ion-icon>
           <ion-label>
             <ion-text color="medium">Views</ion-text>
             <p>
