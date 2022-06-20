@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { CategoryPagePageRoutingModule } from './category-page-routing.module';
 
 import { CategoryPagePage } from './category-page.page';
-import { PostCardComponent } from 'src/app/post-card/post-card.component';
+import { PostCardComponent } from 'src/app/components/post-card/post-card.component';
 
 @NgModule({
   imports: [
