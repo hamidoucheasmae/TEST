@@ -14,7 +14,8 @@ SwiperCore.use([EffectFade]);
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit, AfterContentChecked {
-
+  profileInfo: any = {};
+  profileAvailable: boolean = false;
   config: SwiperOptions;
   config1: SwiperOptions;
   categories: any[] = [];

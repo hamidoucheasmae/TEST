@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="65.333" height="67.925" viewBox="0 0 65.333 67.925">
+  <g id="INFOTANGER" transform="translate(-169 -107.193)">
+    <g id="Groupe_2025" data-name="Groupe 2025" transform="translate(169 107.193)">
+      <path id="Tracé_2006" data-name="Tracé 2006" d="M1195.2-1191.917l6.762,4.194,18.913,1.406,10.468-5.6-10.468-18.151-17.294,1.828Z" transform="translate(-1176.46 1210.068)" fill="#ff7d51"/>
+      <path id="Tracé_2004" data-name="Tracé 2004" d="M1119.685-1018.5l17.34-2.8,22.569,2.8,23.391-6.117v11.575l-63.3,2.9Z" transform="translate(-1117.652 1049.644)" fill="#33babd"/>
+      <path id="Tracé_2005" data-name="Tracé 2005" d="M1114.277-1053.17l-.862,7.165,19.822-4.293,21.215,4.293,24.265-5.5-2.463-9.131-23.248,7.465-19.768-4.865Z" transform="translate(-1113.415 1073.986)" fill="#62c5c8"/>
+    </g>
+    <text id="INFO_TANGER" data-name="INFO 
+TANGER" transform="translate(170.519 161.119)" fill="#ff7d51" font-size="13" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="0">INFO </tspan><tspan x="0" y="11">TANGER</tspan></text>
+  </g>
+</svg>

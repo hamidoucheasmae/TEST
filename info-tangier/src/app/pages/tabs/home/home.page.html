@@ -1,6 +1,6 @@
 <ion-header class="ion-no-border ion-padding-horizontal">
   <ion-toolbar color="light">
-    <ion-title mode="md">Hi, Asmae!</ion-title>
+    <ion-title mode="md">Hi!</ion-title>
     <ion-buttons slot="end">
       <ion-fab-button size="small" color="white">
         <ion-icon name="notifications-outline" color="primary"></ion-icon>
@@ -8,7 +8,7 @@
     </ion-buttons>
     <ion-buttons slot="start">
       <ion-avatar>
-        <ion-img src="assets/imgs/user1.png"></ion-img>
+        <ion-img src="{{profileInfo.photoURL || 'assets/imgs/user1.png'}}"></ion-img>
       </ion-avatar>
     </ion-buttons>
   </ion-toolbar>
