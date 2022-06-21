@@ -1,6 +1,6 @@
 <swiper [config]="config" effect="fade">
   <ng-template swiperSlide *ngFor="let category of categoryArray" >
-    <ion-card>
+    <ion-card style="width: 90%;">
       <ion-item lines="none">
      
         <ion-label class="ion-text-wrap" [routerLink]="['/category',category.data.category, category.id]">{{category?.data?.category}}</ion-label>
