@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from 'src/app/services/post.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 
 
@@ -11,13 +11,16 @@ import { NavController } from '@ionic/angular';
 })
 export class DetailsPostPage implements OnInit {
   segmentValue = '1';
-  currentImage: string;
+  currentImage!: any;
   postData !: any;
   similarPostArray !: any[];
 
-  constructor( private route: ActivatedRoute, private postService : PostService) { }
+
+  constructor( private route: ActivatedRoute, private postService : PostService , private router: Router) { }
 
   ngOnInit(): void {
+   
+    
 
     this.route.params.subscribe(val =>{
 
@@ -29,7 +32,8 @@ export class DetailsPostPage implements OnInit {
       })
     })
    
-    this.currentImage = this.postData.images[0];
+    this.currentImage = this.postData?.images[0];
+    
   }
 
   loadSimilarPosts(catId : any){
@@ -45,6 +49,10 @@ export class DetailsPostPage implements OnInit {
 
   changeImage(image) {
     this.currentImage = image;
+  }
+
+  navigate(){
+    this.router.navigate(['/tabs/home'])
   }
 
 }
