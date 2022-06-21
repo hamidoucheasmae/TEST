@@ -4,6 +4,7 @@ import { PostService } from 'src/app/services/post.service';
 import SwiperCore, { EffectFade, SwiperOptions } from 'swiper';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { FavouritesService } from 'src/app/services/favourites.service';
 
 @Component({
   selector: 'app-post-card',
@@ -11,10 +12,11 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
   styleUrls: ['./post-card.component.scss'],
 })
 export class PostCardComponent implements OnInit {
+  posts: any = [];
   postArray !: any[];
   config: SwiperOptions;
   config1: SwiperOptions;
-  constructor() { }
+  constructor(private favouritesService :FavouritesService) { }
 
   @Input() postData !: any;
 
@@ -30,5 +32,15 @@ export class PostCardComponent implements OnInit {
       slidesPerView: 2
     };
   }
+
+  
+  favourite(check){
+    this.favouritesService.addToFav(this.postData);
+    this.postData.isFavorite = check;
+}
+disfavourite(check){
+    this.postData.isFavorite = check;
+}
+
 
 }

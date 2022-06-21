@@ -1,9 +1,42 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>wishlist</ion-title>
+      <ion-title>favorites</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
+  <ion-grid>
+    <ion-card  *ngFor="let post of favoritePosts" class="location-card">
+  
+      <div >
+        <img src="{{ post.data.postImgPath }}" />
+      </div>
+      <ion-item lines="none">            
+        <ion-label class="ion-text-wrap">
+          <ion-text class="title">{{ post.data?.title }}</ion-text>
+          <p>
+            <ion-text color="medium">
+             
+            </ion-text>
+          </p>
+        </ion-label>
+        <ion-icon style="color: #d41414" (click)="diFav(post)" slot="end" name="heart"></ion-icon>
+        <!-- <ion-fab-button size="small" slot="end" color="white">
+          <ion-icon name="heart-outline" color="medium"></ion-icon>
+        </ion-fab-button> -->
+      </ion-item>
+    </ion-card>
+      <ion-row>
+          <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col></ion-col>
+      </ion-row>
+  </ion-grid>
 
 </ion-content>
