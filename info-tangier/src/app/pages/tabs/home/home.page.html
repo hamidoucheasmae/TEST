@@ -19,7 +19,7 @@
   <ion-row>
     <ion-col>
       <ion-label class="big-heading">
-        <p class="ion-text-start">Info Tangier vous guide </p>
+        <p class="ion-text-start">InfoTangier Guide You </p>
    
         <!-- <p class="ion-text-start marginTop">vous guide</p> -->
       </ion-label>
@@ -42,7 +42,7 @@
   <ion-row class="ion-margin-top">
     <ion-col size="8">
       <ion-label class="ion-margin-start heading">
-        Top trips
+        Featured
         <ion-icon name="chevron-down-outline"></ion-icon>
       </ion-label>
    
@@ -54,29 +54,11 @@
       </ion-button>
     <!-- </ion-col> -->
     <swiper [config]="config1" effect="fade">
-      <ng-template swiperSlide *ngFor="let trip of trips">
-        <ion-card class="location-card">
-          <div [routerLink]="['/', 'tabs', 'trip', trip.id]">
-            <img [src]="trip?.image" />
-            <ion-chip class="ion-padding">
-              <ion-label color="white">₹ {{trip?.price}}</ion-label>
-            </ion-chip>
-          </div>
-          <ion-item lines="none">            
-            <ion-label class="ion-text-wrap" [routerLink]="['/', 'tabs', 'trip', trip.id]">
-              <ion-text class="title">{{trip?.name}}</ion-text>
-              <p>
-                <ion-text color="medium">
-                  {{trip?.category}}
-                </ion-text>
-              </p>
-            </ion-label>
-            <ion-fab-button size="small" slot="end" color="white">
-              <ion-icon name="heart-outline" color="medium"></ion-icon>
-            </ion-fab-button>
-          </ion-item>
-        </ion-card>
-      </ng-template>
+      <ng-template swiperSlide *ngFor="let featuredPost of featuredPostArray" >
+      
+        <app-post-card [postData]="featuredPost"></app-post-card>
+       
+    </ng-template>
     </swiper>
   </ion-row>
  
@@ -88,7 +70,7 @@
 <ion-row class="ion-margin-top" >
   <ion-col size="8">
     <ion-label class="ion-margin-start heading">
-      Top trips
+      All destinations
       <ion-icon name="chevron-down-outline"></ion-icon>
     </ion-label>
  

@@ -21,6 +21,8 @@ export class HomePage implements OnInit, AfterContentChecked {
   categories: any[] = [];
   trips: any[] = [];
   postArray !: any[];
+  featuredPostArray !: any[];
+  latestPostArray !: any[];
 
   constructor( private postService : PostService,   private storage: AngularFireStorage,
     private afs : AngularFirestore) {
@@ -44,8 +46,22 @@ export class HomePage implements OnInit, AfterContentChecked {
       { id: 3, name: 'Adi Kailash', category: 'Treking', image: 'assets/imgs/kailash.jpg', price: '5K' },
       { id: 4, name: 'Tarsar Lake', category: 'Lake', image: 'assets/imgs/tarsar.jpg', price: '15K' },
     ];
+
+
+    this.postService.loadFeatured().subscribe(val=>{
+      this.featuredPostArray = val;
+    })
+  
+    this.postService.loadLatest().subscribe(val =>{
+      this.latestPostArray = val
+    })
+   
   }
 
+
+
+ 
+ 
   ngAfterContentChecked() {
     this.config = {
       slidesPerView: 2.1
@@ -54,5 +70,7 @@ export class HomePage implements OnInit, AfterContentChecked {
       slidesPerView: 2
     };
   }
+
+ 
 
 }
